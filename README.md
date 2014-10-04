@@ -7,13 +7,17 @@ For small data, no index.
 
 The key for register is the number of register.
 
-No install process, just copy the tdf.py file on your project:
+## Installation ##
 
----> cut here <---
+No install process, just copy the `tdf.py` file on your project.
 
+
+## Simple usage example ##
+
+```
 import tdf
 
-REGISTERS=10
+REGISTERS = 10
 
 data = tdf.Manager(filename='test.tdf', structure=(('login', 50), ('password', 50),), in_memory=True, debug=True)
 
@@ -24,7 +28,6 @@ with data:
 data.open()
 print("There are {} registers.".format(len(data)))
 data.close()
+```
 
----> cut here <---
-
-See the test.py file for more extensive examples.
+See the `test.py` file for more extensive examples.
